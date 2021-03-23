@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            background-color: black;
+        }
+        /*TAB*/
+        
+        .tablink {
+            background-color: black;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 25%;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .tablink:hover {
+            background-color: rgb(0, 91, 196);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /* Style the tab content */
+        
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 50px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        #Profile {
+            background-color: black;
+        }
+        
+        #Ability {
+            background-color: black;
+        }
+        
+        #Social {
+            background-color: black;
+        }
+        
+        #Location {
+            background-color: black;
+        }
+        /*TAB*/
+        
+        .bg {
+            background-image: url("image.MQ4.0.2x.20180823134722.jpeg");
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            opacity: 1;
+            display: block;
+            width: 100%;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+        
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: relative;
+            top: 80%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50% -50%);
+            text-align: center;
+        }
+        
+        .bg:hover .middle {
+            opacity: 1;
+        }
+        
+        .text {
+            color: rgb(240, 240, 240);
+            font-size: 45px;
+            padding: auto;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /*TEXT IMAGE BOX FINISH*/
+        
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        /* Create four equal columns that sits next to each other */
+        
+        .column {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+        
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+        
+        .video {
+            color: white;
+            text-align: justify;
+        }
+        
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+        
+        .menu {
+            position: relative;
+            text-align: left;
+            color: black;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .footer {
+            font-size: 40px;
+            color: whitesmoke;
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            max-width: 100px;
+            position: relative;
+            margin: auto;
+        }
+        /* Caption text */
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 45px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: justify;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /*SLIDE SHOWWWWWWWWW*/
+        
+        .slideshow-container {
+            max-width: 100px;
+            position: relative;
+            margin: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: rgb(32, 32, 32);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active {
+            background-color: black;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: rgb(0, 91, 196);
+        }
+        
+        h3 {
+            color: white;
+            padding: 11px 55px;
+        }
+        
+        p {
+            padding: 11px 55px;
+            color: white;
+        }
+        
+        .paragraph button {
+            background-color: rgb(255, 255, 255);
+            padding: 9px 9px;
+            margin: auto;
+        }
+    </style>
+
+    <title>Project</title>
+</head>
+
+<body>
+
+    <div class="bg">
+        <div class="middle">
+            <div class="text"></div>
+        </div>
+    </div>
+
+    <br>
+    <div id="eqc" class="tabcontent">
+        <h1><img src="eq-channel-tile_new.webp" width="25%"> </h1>
+        <p>Here you will find everything you need to know about the new brand for electric mobility from Mercedes-Benz. Learn more about our fascinating products and innovative vehicle concepts and experience the future today. To find out about the offers
+            available in your country, please visit your country's website.</P>
+    </div>
+
+    <div id="me" class="tabcontent">
+        <h1><img src="me-channel-tile_new.webp" width="25%"></h1>
+        <p>The Vehicle Tracker makes it possible to track your moving vehicle via GPS – for example if you’ve lent it to someone. The Geofencing function informs you as soon as your Mercedes-Benz leaves or enters an area which you have previously defined
+            and marked. Enough fuel for tomorrow? Just stay where you are – Remote Retrieval of Vehicle Status allows you to call up all sorts of information about your Mercedes-Benz online. Whether it’s the odometer reading, the range or the tank fill
+            level or something else that you need – a quick glance at your smartphone provides the details.</p>
+    </div>
+
+    <div id="museum" class="tabcontent">
+        <h1><img src="museum-channel-tile.webp" width="25%"> </h1>
+        <p>The Mercedes-Benz Museum in Stuttgart celebrates the automobile invented by Carl Benz in 1886: it relates its history and tells its stories, bringing both alive by placing them in the context of technology, day-to-day life, social history and
+            popular culture. More than 160 vehicles of all types are the main protagonists. They range from some of the oldest automobiles ever built to legendary racing cars and futuristic research vehicles.
+        </p>
+    </div>
+
+    <div id="she" class="tabcontent">
+        <h1><img src="she-channel-tile.webp" width="25%"> </h1>
+        <p>Our global initiative She’s Mercedes is a platform dedicated to inspiring, connecting and empowering women, highlighting their unique success and creating a dialogue that transcends cultures, industries and experiences.
+        </p>
+    </div>
+
+
+    <button class="tablink" onclick="openCity('eqc', this, ' black')">Mercedes EQC</button>
+    <button class="tablink" onclick="openCity('me', this, ' black')">Mercedes Me</button>
+    <button class="tablink" onclick="openCity('museum', this, ' black')">Mercedes-Benz Museum</button>
+    <button class="tablink" onclick="openCity('she', this, ' black')">She's Mercedes</button>
+    <br>
+
+    <script>
+        function openCity(cityName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(cityName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+    <br>
+    <br>
+    <!---->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="01.jpg" class="img" alt="car1" width="1260" height="570">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="02.jpg" class="img" alt="car2" width="1260" height="570">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="03.jpg" class="img" alt="car3" width="1260" height="570">
+        </div>
+        <div class="mySlides fade">
+            <img src="04.jpg" class="img" alt="car3" width="1260" height="570">
+        </div>
+        <div class="mySlides fade">
+            <img src="05.jpg" class="img" alt="car3" width="1260" height="570">
+        </div>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+    </div>
+
+
+    <br>
+
+
+    <div class="paragraph">
+        <h3>Welcome to the Mercedes-Benz international website.</h3>
+        <p>Exclusive reports and current films: experience a broad range of topics from the fascinating world of Mercedes-Benz. To find out about offers in your location, please go to the local Mercedes-Benz website.
+        </p>
+        <p>This is the International website of Mercedes-Benz AG. Visitors from the U.S., please visit our U.S. <a href="https://mbusa.com/">www.mbusa.com</a> or local website <a href="https://www.mercedes-benz.co.id/passengercars.html?_ga=2.28958143.2039219135.1616421700-260106838.1616157865">in here.</a></p>
+        <br>
+    </div>
+    <!-- Header -->
+    <div class="video">
+        <video width="1260" height="850" controls>
+              <source src="EQC x The Weeknd “Blinding Lights”.mp4" type="video/mp4">
+                 </video>
+    </div>
+    <br>
+    <br>
+
+    <!-- Photo Grid -->
+    <div class="row">
+        <div class="column">
+            <img src="00-mercedes-benz-e-class-with-florian-ambrosius-2560x1440.webp" style="width:100%">
+            <img src="mercedes-benz-c-class-s206-vertical-gallery-02-1680x1260-02-2021.webp " style="width:100% ">
+
+        </div>
+        <div class="column">
+            <img src="carpixel.net-2019-mercedes-benz-glb-class-amg-line-91501-hd.jpg" style="width:100%">
+            <img src="carpixel.net-2019-mercedes-benz-glb-class-edition-1-91518-hd.jpg" style="width:100%">
+
+        </div>
+        <div class="column">
+            <img src="wqeqweqw.jpeg" style="width:100%">
+            <img src="mercedes-benz-eqc-provided-204-1220x800.jpg" style="width:100%">
+        </div>
+        <div class="column ">
+            <img src="mercedes-benz-c-class-w206-adapted-stage-03-3400x1912-02-2021.webp" style="width:100% ">
+            <img src="carpixel.net-2018-mercedes-benz-c-class-estate-amg-line-uk-79632-hd.jpg " style="width:100% ">
+        </div>
+    </div>
+
+    <div class="footer ">
+        <p>Stay informed!</p>
+    </div>
+    <div class="text1"></div>
+    <p>Follow us and use the following social media platforms to get in contact with us.</p>
+    <p>Powered by: <a href="https://purwadhika.com/">Purwadhika.com</a></p>
+    </div>
+    <br>
+    <br>
+
+</body>
+
+</html>
